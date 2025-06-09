@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="flex-container">
+        <div class="one">File</div>
+        <div class="two">Edit</div>
+        <div class="three">Selection</div>
+        <div class="four">View</div>
+    </div>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name">
+            <br>
+            <label for="email">email</label>
+            <input type="email" name="" id="email" required>
+            <br>
+            <label for="number">Register number</label>
+            <input type="number" name="" id="number">
+            <br>
+            <label for="department">Department</label>
+            <input type="text" id="department">
+            
+            </form>
+            <button onclick="showName()">Submit</button>
+            <h1 id="result"></h1>
+            <script>
+                function showName(){
+                    const name=document.getElementById('name').value
+                    const email=document.getElementById('email').value
+                    const number=document.getElementById('number').value
+                    const department=document.getElementById('department').value
+                    document.getElementById('result').innerText=`Name: ${name}<br>Email: ${email}</br> <br>Phone_number: ${number}</br> <br>Department: ${department}</br>`;
+                }
+            </script>
+</body>
+</html>
